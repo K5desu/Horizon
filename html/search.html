@@ -5,48 +5,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../bustime.css">
     <script src="../bustime.js"></script>
+    <script src="../bus-search/search.js"></script>
     <title>検索</title>
 </head>
 <body>
-    <header>
-        <div class="main-menu">
-          <div class="logo">
-            <p>龍大バス情報</p>
-          </div>
-          <div class="pc-menu">
-            <ul>
-              <li>
-                <a href="./home.html">ホーム</a>
+  <header>
+      <div class="main-menu">
+        <div class="logo">
+          <p>龍大バス情報</p>
+        </div>
+        <div class="pc-menu">
+          <ul>
+            <li>
+              <a href="./home.html">ホーム</a>
+            </li>
+            <li>
+              <a href="./timetable.html">時刻表・路線図</a>
+            </li>
+            <li>
+              <a href="./search.html">検索</a>
+            </li>
+          </ul>
+        </div>
+        <div class="sp-menu">
+          <input type="checkbox" id="sp-menu__check">
+          <label for="sp-menu__check" class="sp-menu__box">
+            <span></span>
+          </label>
+          <div class="sp-menu__content">
+            <ul class="sp-menu__list">
+              <li class="sp-menu__item">
+                <a class="sp-menu__link" href="./home.html">ホーム</a>
               </li>
-              <li>
-                <a href="./timetable.html">時刻表・路線図</a>
+              <li class="sp-menu__item">
+                <a class="sp-menu__link" href="./timetable.html">時刻表・路線図</a>
               </li>
-              <li>
-                <a href="./search.html">検索</a>
+              <li class="sp-menu__item">
+                <a class="sp-menu__link" href="./search.html">検索</a>
               </li>
             </ul>
           </div>
-          <div class="sp-menu">
-            <input type="checkbox" id="sp-menu__check">
-            <label for="sp-menu__check" class="sp-menu__box">
-              <span></span>
-            </label>
-            <div class="sp-menu__content">
-              <ul class="sp-menu__list">
-                <li class="sp-menu__item">
-                  <a class="sp-menu__link" href="./home.html">ホーム</a>
-                </li>
-                <li class="sp-menu__item">
-                  <a class="sp-menu__link" href="./timetable.html">時刻表・路線図</a>
-                </li>
-                <li class="sp-menu__item">
-                  <a class="sp-menu__link" href="./search.html">検索</a>
-                </li>
-              </ul>
-            </div>
-          </div>
         </div>
-    </header>
+      </div>
+  </header>
+
+<!--路線選択用コード-->
+  <select id="ch-line">
+    <option value="null">バスを選択して下さい</option>
+    <option value="seta-ryu">瀬田駅～龍谷大学</option>
+    <option value="ishi-ryu">石山駅～龍谷大学</option>
+    <option value="ryu-seta">龍谷大学～瀬田駅</option>
+    <option value="ryu-ishi">龍谷大学～石山駅</option>
+  </select>
+  <input type="button" value="検索🔎" onclick="clickBtn()"/><br>
+  <!--動作テスト用コード-->
+  <!--<span id="ch-bus"></span>-->
+
+<span id="bus1">1</span><br>
+<span id="bus2">2</span>
+
+
+
+
     
 </body>
 </html>

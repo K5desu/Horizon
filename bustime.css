@@ -1,5 +1,7 @@
 @charset "UTF-8";
 
+
+/*ナビゲーションバー*/
 /* 画面サイズが1279px以下の時はPC用メニューは非表示 */
 @media screen and (max-width: 1279px) {
     .pc-menu {
@@ -28,7 +30,7 @@
     text-align: center;
     /*padding: 18px;*/
     font-size: 24px;
-    width: 300px;
+    width: 250px;
     background: #dddddd;
 
     line-height:11px;
@@ -127,3 +129,17 @@
     text-decoration: none;
     padding: 9px 15px 10px 0;
   }
+
+/*mainの画像の大きさ*/
+img {
+  width: 100%;
+  height: auto;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: 1px solid red;
+}
+
+
+
+
+
