@@ -12,60 +12,68 @@
     <script>
     alert("中書島発龍谷大学行きであってますか？");
     </script>
+   
+    <h1>中書島発龍谷大学行きバス</h1>
     <div class="nowtime">
-        <h1>中書島発龍谷大学行きバス</h1>
         <p>現在時刻から最短の龍谷大学行きのバスは<p id="time"></p>中書島発です</p>
-        <script>
-            let date = new Date(); 
-            let hour = date.getHours();         
-            let min = date.getMinutes();  
-            var nextbasu=null;
-            if(hour==8){
-                if(min<26){
-                    nextbasu="8:26";
-                }
-
-                else if(min<28){
-                    nextbasu="8:28";
-                }
-                else{
-                nextbasu="10:13";
-                }
+    </div>
+    <script>
+        let date = new Date(); 
+        let hour = date.getHours();         
+        let min = date.getMinutes();  
+        var nextbasu=null;
+        if(hour==8){
+            if(min<26){
+                nextbasu="8:26";
             }
-            else if(8<hour&&hour<=10){
-                if(min<13){
-                nextbasu="10:13";
-                }
-                else if(min<15){
-                    nextbasu="10:15";
-                }
-                else{
-                    nextbasu="12:42";
-                }
 
+            else if(min<28){
+                nextbasu="8:28";
             }
-            else if(11<hour&&hour<=12){
-                if(min<42){
-                    nextbasu="12:42";
+            else{
+            nextbasu="10:13";
+            }
+        }
+        else if(8<hour&&hour<=11){
+            if(hour<11&&min<13){
+            nextbasu="10:13";
+            }
+            else if(min<15){
+                nextbasu="10:15";
+            }
+            else{
+                nextbasu="12:42";
+            }
 
-                }
-                else{
-                    nextbasu="8:26"
-                }
-
+        }
+        else if(11<hour&&hour<=12){
+            if(min<42){
+                nextbasu="12:42";
 
             }
             else{
-                nextbasu="8:26";
+                nextbasu="8:26"
             }
-            var time=document.getElementById("time");
-            time.textContent=nextbasu;
-        </script>
-    </div>
-</header>]
+
+
+        }
+        else{
+            nextbasu="8:26";
+        }
+        var time=document.getElementById("time");
+        time.textContent=nextbasu;
+    </script>
+    
+</header>
 <main>
+    <div class="basupic">
+        <h2>中書島発龍谷大学行きバス画像</h2>
     <img src="./basu.jpg" alt="バスの画像"/>
+    </div>
+    <div class="basutime">
+        <h2>中書島発龍谷大学行きバス時刻表</h2>
     <img src="./time.jpg" alt="時刻表"/>
+    </div>
     
 </main>
 
